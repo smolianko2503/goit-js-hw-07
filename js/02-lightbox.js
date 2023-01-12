@@ -19,15 +19,13 @@ const markup = galleryItems.map(({ preview, original, description }) =>
 
 gallery.innerHTML = markup;
 
-
+const lightbox = new SimpleLightbox('.gallery a', {captionsData: 'alt', captionDelay: 250});
 gallery.addEventListener('click', (evt) => {
     evt.preventDefault();
 
     if (evt.target.nodeName !== 'IMG') {
         return
     }
-
-  const lightbox = new SimpleLightbox('.gallery a', {captionsData: 'alt', captionDelay: 250});
 })
 
 
